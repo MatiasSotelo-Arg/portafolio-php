@@ -1,0 +1,40 @@
+.contenedor-header {
+    background-color: rgba(13, 13, 13, 0.96);
+    display: flex;
+    justify-content: center;
+    height: 8vh;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    color: white;
+    width: 80%;
+}
+
+.nav li {
+    display: inline;
+}
+
+.nav a {
+    color: white;
+    margin: 0 1rem;
+    font-size: 1.2rem;
+}
+
+.titulo a:hover, ul li a:hover {
+    color: #007bff ;
+}
+
+.titulo a:hover {
+    cursor: pointer;
+}
+
+.titulo a{
+    font-size: 2rem;
+}
+
+
+
