@@ -1,3 +1,9 @@
+<?php 
+    include 'src/conexion.php';
+    $conexion = new conexion();
+    $proyectos = $conexion->consultar("SELECT * FROM `proyecto`");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +30,7 @@
                 <div>
                     <ul class="cont-iconos">
                         <li>
-                            <a href="#">
+                            <a href="https://www.linkedin.com/in/matias-sotelo-17b16826b" target="_blank">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                                 <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
@@ -36,7 +42,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="https://github.com/MatiasSotelo-Arg" target="_blank">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                                     <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
@@ -44,7 +50,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="mailto:matysotelo07@gmail.com">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                                     <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
@@ -55,60 +61,26 @@
                     </ul>
                 </div>
         </section>
-
+            
         <div class="cont-proyectos">
-            <h2 class="titulo-proyectos">Proyectos</h2>
-            <div class="proyectos">
-                <div class="proyecto">
-                    <h1>Proyecto Tal</h1>
-                    <img class="proyecto-img" src=".../../assets/imagenes/img-proyecto.jpg" alt="proyecto tal">
-                    <div>
-                        <a href="#">Ver proyecto</a>
-                        <a href="#">github</a>
-                    </div>
-                </div>
-                <div class="proyecto">
-                    <h1>Proyecto Tal</h1>
-                    <img class="proyecto-img" src=".../../assets/imagenes/img-proyecto.jpg" alt="proyecto tal">
-                    <div>
-                        <a href="#">Ver proyecto</a>
-                        <a href="#">github</a>
-                    </div>
-                </div>
-                <div class="proyecto">
-                    <h1>Proyecto Tal</h1>
-                    <img class="proyecto-img" src=".../../assets/imagenes/img-proyecto.jpg" alt="proyecto tal">
-                    <div>
-                        <a href="#">Ver proyecto</a>
-                        <a href="#">github</a>
-                    </div>
-                </div>
-                <div class="proyecto">
-                    <h1>Proyecto Tal</h1>
-                    <img class="proyecto-img" src=".../../assets/imagenes/img-proyecto.jpg" alt="proyecto tal">
-                    <div>
-                        <a href="#">Ver proyecto</a>
-                        <a href="#">github</a>
-                    </div>
-                </div>
-                <div class="proyecto">
-                    <h1>Proyecto Tal</h1>
-                    <img class="proyecto-img" src=".../../assets/imagenes/img-proyecto.jpg" alt="proyecto tal">
-                    <div>
-                        <a href="#">Ver proyecto</a>
-                        <a href="#">github</a>
-                    </div>
-                </div>
-                <div class="proyecto">
-                    <h1>Proyecto Tal</h1>
-                    <img class="proyecto-img" src=".../../assets/imagenes/img-proyecto.jpg" alt="proyecto tal">
-                    <div>
-                        <a href="#">Ver proyecto</a>
-                        <a href="#">github</a>
-                    </div>
+        <h2 class="titulo-proyectos" id="proyectos">Proyectos</h2>
+
+        <div class="proyectos">
+            <?php foreach($proyectos as $proyecto) { ?>
+
+            <div class="proyecto">
+                <h1><?php echo $proyecto['titulo']; ?></h1>
+                <img class="proyecto-img" src=".../../assets/imagenes/img-proyecto.jpg" alt="proyecto tal">
+                <div>
+                    <?php echo '<a href="'.$proyecto['linkProyecto'].'" target="_blank">Ver proyecto</a>'; ?>
+                    <?php echo '<a href="'.$proyecto['linkGithub'].'" target="_blank">Github</a>'; ?>
                 </div>
             </div>
+            
+            <?php } ?>
         </div>
+        
+
     </main>
 </body>
 </html>
