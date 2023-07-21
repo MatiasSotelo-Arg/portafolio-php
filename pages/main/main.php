@@ -22,7 +22,7 @@
                     </div>
                     <div class="cont-info">
                         <h1>Hola 🖐️ <br> Soy Matias Sotelo</h1>
-                        <h1>Desarrollador Full Stack</h1>
+                        <h1>Full Stack Junior</h1>
                     </div>
                 </div>
                
@@ -70,7 +70,7 @@
 
             <div class="proyecto">
                 <h1><?php echo $proyecto['titulo']; ?></h1>
-                <img class="proyecto-img" src=".../../assets/imagenes/img-proyecto.jpg" alt="proyecto tal">
+                <img class="proyecto-img" src=".../../assets/img_proyectos/<?php echo $proyecto['img']?>"  alt="<?php echo $proyecto['titulo']?>">
                 <div>
                     <?php echo '<a href="'.$proyecto['linkProyecto'].'" target="_blank">Ver proyecto</a>'; ?>
                     <?php echo '<a href="'.$proyecto['linkGithub'].'" target="_blank">Github</a>'; ?>

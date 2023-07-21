@@ -36,5 +36,12 @@
     font-size: 2rem;
 }
 
+.visitado {
+    background-color: #007bff9f;
+    padding: 0 1rem;
+    margin: 0!important;
+}
 
-
+.visitado:hover {
+    color: rgba(13, 13, 13, 0.96);
+}

@@ -5,7 +5,9 @@ $ruta_actual = $_SERVER['PHP_SELF'];
 
 if (strpos($ruta_actual, 'index_admin.php') !== false) {
     include 'src/conexion.php';
-} elseif (strpos($ruta_actual, 'abm.php') !== false) {
+} else if (strpos($ruta_actual, 'abm.php') !== false) {
+    include '../../src/conexion.php';
+} else if (strpos($ruta_actual, 'modificar.php') !== false) {
     include '../../src/conexion.php';
 }
 
@@ -24,9 +26,8 @@ if( isset( $_SESSION['usuario']) != 'Admin') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     
-    
+    <link rel="stylesheet" href="header.css">
 
     <?php 
     if (strpos($ruta_actual, 'index_admin.php') !== false) {
@@ -35,29 +36,46 @@ if( isset( $_SESSION['usuario']) != 'Admin') {
     } else if (strpos($ruta_actual, 'abm.php') !== false) {
         echo '<link rel="stylesheet" href="../header/header.css">';
         echo '<link rel="stylesheet" href="../../css\resets.css">';
+    } else if (strpos($ruta_actual,'modificar.php') !== false) {
+        echo '<link rel="stylesheet" href="../header/header.css">';
+        echo '<link rel="stylesheet" href="../../css\resets.css">';
     }
 ?>
 
+<?php
+    if(strpos($ruta_actual, 'index_admin.php') !== false) {
+        $linkAdm = 'pages\abm\abm.php';
+        $linkProyectos = '#';
+        $linkSesion = 'src\cerrar_sesion.php';
+        $linkTitulo = 'index.php';
+    } else if(strpos($ruta_actual, 'abm.php') !== false) {
+        $linkAdm = '#';
+        $linkProyectos = '../../index_admin.php';
+        $linkSesion = '../../src/cerrar_sesion.php';
+        $linkTitulo = '../../index.php';
+    }
+?>
 
 </head>
 <body>
+
     <header class="contenedor-header"> 
 
     <nav class="nav">
         <h1 class="titulo">
-            <a href="index.php">&lt;MS/&gt; DEV</a>
+            <a href=" <?php echo $linkTitulo ?> " target="_blank">&lt;MS/&gt; DEV</a>
         </h1>
 
         <div>
             <ul>
                 <li>
-                    <a href="#">Proyectos</a>
+                    <a href="<?php echo $linkProyectos ?>">Proyectos</a>
                 </li>
                 <li>
-                    <a href="pages\abm\abm.php">ABM</a>
+                    <a href="<?php echo $linkAdm ?>" class="<?php echo $clase ?>">ABM</a>
                 </li>
                 <li>
-                    <a href="src\cerrar_sesion.php">cerrar sesion: <?php echo $_SESSION['usuario'];?></a>
+                    <a href="<?php echo $linkSesion ?>">cerrar sesion: <?php echo $_SESSION['usuario'];?></a>
                 </li>
             </ul>
             
