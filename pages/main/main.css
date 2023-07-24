@@ -51,7 +51,7 @@
 .titulo-proyectos {
     margin-bottom: 1.5rem;
     font-size: 4rem;
-    background-color: #0202020a;
+
     width: auto;
     text-align: center;
     padding: 1rem;
@@ -66,16 +66,41 @@
 }
 
 .proyecto {
-    background-color: rgba(128, 128, 128, 0.288);
     transition: box-shadow 0.5s ease;
 }
 
 .proyecto:hover {
-    box-shadow: 0 0 0 3px rgba(13, 13, 13, 0.96);
+    box-shadow: 0 0 0 3px #0d0d0df5;
 }
-
+.cont-img {
+    width: 100%;
+    height: 15rem;
+}
 .proyecto-img {
     width: 100%;
-    height: 10rem;
+    height: 100%;
 }
 
+.proyecto h1 {
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.cont-link {
+    text-align: center;
+}
+
+.cont-link a {
+    padding: 0.5rem;
+    display: inline-block;
+    font-size: 1.2rem;
+}
+
+.titulo-proyectos, a, .proyecto  {
+    background-color: #161616;
+    color: white;
+}
+
+a:hover {
+    color: #007bff;
+}

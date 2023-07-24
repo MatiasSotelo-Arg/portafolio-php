@@ -24,16 +24,21 @@ if($_POST) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <div class="cont_login">
+    <div class="cont-login">
         <h1>Login</h1>
 
-        <form action="login.php" method="post">
-            <input type="text" name="email" id="email" placeholder="Usuario">
-            <input type="password" name="password" id="password" placeholder="Contraseña">
-            <input type="submit" value="iniciar sesion">
-        </form>
+        <div class="cont-form">
+            <form action="login.php" method="post">
+                <input type="text" name="email" id="email" placeholder="Usuario">
+                <input type="password" name="password" id="password" placeholder="Contraseña">
+                <input type="submit" value="iniciar sesion" class="submit">
+            </form>
+        </div>
+        
     </div>
 </body>
 </html>

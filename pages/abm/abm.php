@@ -55,69 +55,72 @@
     <title>Administrador</title>
 
     <link rel="stylesheet" href="./adm.css">
+    <link rel="stylesheet" href="../../css/variables.css">
 
 </head>
 <body>
-<div class="contenedor">
+<div class="contenedor-principal">
     <!-- Agregar proyecto -->
-    <h2>Agregar proyecto</h2>
+    <div class="contenedor">
+        <h2>Agregar proyecto</h2>
 
-    <form action="abm.php" method="post" enctype="multipart/form-data">
-        <div>
-            <label for="titulo">Titulo proyecto</label>
-            <input required type="text" name="titulo" id="titulo">
-        </div>
-        <div>
-            <label for="archivo">Imagen</label>
-            <input required type="file" name="archivo" id="archivo">
-        </div>
-        <div>
-            <label for="linkProyecto">Link proyecto</label>
-            <input required type="text" name="linkProyecto" id="linkProyecto">
-        </div>
-        <div>
-            <label for="linkGithub">Link github</label>
-            <input required type="text" name="linkGithub" id="linkGithub">
-        </div>
-        
-        <input type="submit" value="Agregar proyecto">
-    </form>
+        <form action="abm.php" method="post" enctype="multipart/form-data" class="cont-form">
+            <div>
+                <label for="titulo">Titulo proyecto</label>
+                <input required type="text" name="titulo" id="titulo">
+            </div>
+            <div>
+                <label for="archivo">Imagen</label>
+                <input required type="file" name="archivo" id="archivo">
+            </div>
+            <div>
+                <label for="linkProyecto">Link proyecto</label>
+                <input required type="text" name="linkProyecto" id="linkProyecto">
+            </div>
+            <div>
+                <label for="linkGithub">Link github</label>
+                <input required type="text" name="linkGithub" id="linkGithub">
+            </div>
+            
+            <input type="submit" value="Agregar proyecto" class="submit">
+        </form>
+    </div>
+    
 </div>
 
-<div>
+<div class="contenedor-principal cont-modificar">
+    <table>
+        <h2>MODIFICAR</h2>
+        <thead>
+            <tr>
+                <th>Titulo</th>
+                <th>Imagen</th>
+                <th>LinkProyecto</th>
+                <th>LinkGithub</th>
+                <th>Eliminar</th>
+                <th>Modificar</th>
+            </tr>
+        </thead>
 
-<table>
-    <h2>MODIFICAR</h2>
-    <thead>
-        <tr>
-            <th>Titulo</th>
-            <th>Imagen</th>
-            <th>LinkProyecto</th>
-            <th>LinkGithub</th>
-            <th>Eliminar</th>
-            <th>Modificar</th>
-        </tr>
-    </thead>
+        <tbody >
+            <?php 
+            foreach($proyectos as $proyecto){ ?>
+        
+            <tr>
+                <td><?php echo $proyecto['titulo'];?></td>
+                <td><img src="<?php echo '../../assets/img_proyectos/' . $proyecto['img']; ?>" alt="<?php echo $proyecto['titulo']; ?>" class="img"></td>
+                <td class="collapse"><?php echo $proyecto['linkProyecto'];?></td>
+                <td class="collapse"><?php echo $proyecto['linkGithub'];?></td>
+                <td><a name="eliminar" id="eliminar" href="?borrar=<?php echo $proyecto['id'];?>">Eliminar</a></td>
+                <td><a name="modificar" id="modificar" href="?modificar=<?php echo $proyecto['id'];?>">Modificar</a></td>
+            </tr>
 
-    <tbody >
-        <?php 
-        foreach($proyectos as $proyecto){ ?>
+            <?php 
+            } ?>
+
+        </tbody>
     
-        <tr>
-            <td><?php echo $proyecto['titulo'];?></td>
-            <td><img src="<?php echo '../../assets/img_proyectos/' . $proyecto['img']; ?>" alt="<?php echo $proyecto['titulo']; ?>" class="img"></td>
-            <td><?php echo $proyecto['linkProyecto'];?></td>
-            <td><?php echo $proyecto['linkGithub'];?></td>
-            <td><a name="eliminar" id="eliminar" href="?borrar=<?php echo $proyecto['id'];?>">Eliminar</a></td>
-            <td><a name="modificar" id="modificar" href="?modificar=<?php echo $proyecto['id'];?>">Modificar</a></td>
-        </tr>
-
-        <?php 
-        } ?>
-
-    </tbody>
- 
-</table>
+    </table>
 </div>
 </body>
 </html>

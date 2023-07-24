@@ -63,21 +63,24 @@
         </section>
             
         <div class="cont-proyectos">
-        <h2 class="titulo-proyectos" id="proyectos">Proyectos</h2>
+            <h2 class="titulo-proyectos" id="proyectos">Proyectos</h2>
 
-        <div class="proyectos">
-            <?php foreach($proyectos as $proyecto) { ?>
+            <div class="proyectos">
+                <?php foreach($proyectos as $proyecto) { ?>
 
-            <div class="proyecto">
-                <h1><?php echo $proyecto['titulo']; ?></h1>
-                <img class="proyecto-img" src=".../../assets/img_proyectos/<?php echo $proyecto['img']?>"  alt="<?php echo $proyecto['titulo']?>">
-                <div>
-                    <?php echo '<a href="'.$proyecto['linkProyecto'].'" target="_blank">Ver proyecto</a>'; ?>
-                    <?php echo '<a href="'.$proyecto['linkGithub'].'" target="_blank">Github</a>'; ?>
+                <div class="proyecto">
+                    <h1><?php echo $proyecto['titulo']; ?></h1>
+                    <div class="cont-img">
+                        <img class="proyecto-img" src=".../../assets/img_proyectos/<?php echo $proyecto['img']?>"  alt="<?php echo $proyecto['titulo']?>">
+                    </div>
+                    <div class="cont-link">
+                        <?php echo '<a href="'.$proyecto['linkProyecto'].'" target="_blank">Ver proyecto</a>'; ?>
+                        <?php echo '<a href="'.$proyecto['linkGithub'].'" target="_blank">Github</a>'; ?>
+                    </div>
                 </div>
+                
+                <?php } ?>
             </div>
-            
-            <?php } ?>
         </div>
         
 

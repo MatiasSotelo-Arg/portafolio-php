@@ -1,0 +1,39 @@
+.cont-login {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+}
+
+.cont-form {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+input {
+    margin: 0.5rem 0;
+    height: 2.5rem;
+    padding: 0 1rem;
+}
+
+.submit {
+    background-color: #161616;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+    border-radius: 5px;  
+}
+
+h1, .submit {
+    text-transform: uppercase;
+}

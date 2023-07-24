@@ -1,7 +1,7 @@
 .contenedor-header {
-    background-color: rgba(13, 13, 13, 0.96);
+    background-color: #161616;
     display: flex;
-    justify-content: center;
+    justify-content: center;    
     height: 8vh;
 }
 

@@ -18,9 +18,6 @@
             <div>
                 <ul>
                     <li>
-                        <a href="#">Inicio</a>
-                    </li>
-                    <li>
                         <a href="#proyectos">Proyectos</a>
                     </li>
                     <li>
