@@ -48,12 +48,12 @@ if( isset( $_SESSION['usuario']) != 'Admin') {
         $linkProyectos = '#';
         $linkSesion = 'src\cerrar_sesion.php';
         $linkTitulo = 'index.php';
-    } else if(strpos($ruta_actual, 'abm.php') !== false) {
+    } else if(strpos($ruta_actual, 'abm.php') !== false || strpos($ruta_actual, 'modificar.php') !== false ) {
         $linkAdm = '#';
         $linkProyectos = '../../index_admin.php';
         $linkSesion = '../../src/cerrar_sesion.php';
         $linkTitulo = '../../index.php';
-    }
+    } 
 ?>
 
 </head>

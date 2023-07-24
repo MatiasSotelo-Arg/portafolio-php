@@ -39,10 +39,20 @@ if($_POST) {
 }
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="modificar.css">
+</head>
+<body>
 <?php foreach($proyecto as $fila) {?>
 
+<div class="contenedor-principal">
     <div>
-        <h1>Modificar</h1>
+        <h2>Modificar</h2>
     </div>
 
     <form action="#" method="post" enctype="multipart/form-data">
@@ -72,8 +82,16 @@ if($_POST) {
             <input required type="text" name="linkGithub" id="linkGithub" value="<?php echo $fila['linkGithub']?>">
         </div>
 
-        <input type="submit" value="Modificar"> 
+        <div>
+            <input class="submit" type="submit" value="Modificar"> 
+        </div>
+        
 
     </form>
+</div>
 
 <?php } ?>
+</body>
+</html>
+
+
