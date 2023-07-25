@@ -11,6 +11,7 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="./pages/main/main.css">
+    <link rel="stylesheet" href="./pages/main/certificaciones.css">
 </head>
 <body>
     <main>
@@ -132,6 +133,59 @@
             </div>
         </div>
         
+        <!-- <div class="cont-certificaciones">
+            <h2 class="titulo-certificaciones">Certificaciones</h2>
+
+            <div class="contenido-certificaciones">
+                <div class="cart-certificaciones">
+                    <a href="##">
+                        <img class="img-cert" src=".../../assets/certificaciones/carreraReact.jpg" alt="certificado coder house">
+                    </a>
+                </div>
+                <div class="cart-certificaciones">
+                    <a href="##">
+                        <img class="img-cert" src=".../../assets/certificaciones/desarrolloWeb.jpg" alt="certificado coder house">
+                    </a>
+                </div>
+                <div class="cart-certificaciones">
+                    <a href="##">
+                        <img class="img-cert" src=".../../assets/certificaciones/javaScript.jpg" alt="certificado coder house">
+                    </a>
+                </div>
+                <div class="cart-certificaciones">
+                    <a href="##">
+                        <img class="img-cert" src=".../../assets/certificaciones/react.jpg" alt="certificado coder house">
+                    </a>
+                </div>
+            </div>
+        </div> -->
+        <div class="cont-certificaciones">
+            <h2 class="titulo-certificaciones">Certificaciones</h2>
+
+            <div class="contenido-certificaciones">
+                <div class="cart-certificaciones">
+                    <a href="#" class="lightbox-link">
+                        <img class="img-cert" src=".../../assets/certificaciones/carreraReact.jpg" alt="certificado coder house">
+                    </a>
+                </div>
+                <div class="cart-certificaciones">
+                    <a href="#" class="lightbox-link">
+                        <img class="img-cert" src=".../../assets/certificaciones/desarrolloWeb.jpg" alt="certificado coder house">
+                    </a>
+                </div>
+                <div class="cart-certificaciones">
+                    <a href="#" class="lightbox-link">
+                        <img class="img-cert" src=".../../assets/certificaciones/javaScript.jpg" alt="certificado coder house">
+                    </a>
+                </div>
+                <div class="cart-certificaciones">
+                    <a href="#" class="lightbox-link">
+                        <img class="img-cert" src=".../../assets/certificaciones/react.jpg" alt="certificado coder house">
+                    </a>
+                </div>
+            </div>
+        </div>
+
 
         <div class="cont-contacto">
             <div class="contenido-contacto">
@@ -169,5 +223,7 @@
         </div>
 
     </main>
+
+    <script src="src/scripts.js"></script>
 </body>
 </html>
