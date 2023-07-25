@@ -7,6 +7,7 @@ if($_POST) {
         $_SESSION['logueado']='S';
     
         header("location:/portafolio_php/index_admin.php");
+        // header("location:/index_admin.php");
         die();
     } else {
         echo '<script> alert("Usuario y/o Contraseña incorrecta"); </script>';

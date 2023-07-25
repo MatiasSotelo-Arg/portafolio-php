@@ -1,5 +1,4 @@
-<?php 
-    include 'src/conexion.php';
+<?php include 'src/conexion.php';
     $conexion = new conexion();
     $proyectos = $conexion->consultar("SELECT * FROM `proyecto`");
 ?>
@@ -62,6 +61,56 @@
                 </div>
         </section>
             
+        <div class="cont-conocimientos">
+
+            <h2 class="titulo-conocimientos">Conocimientos</h2>
+            
+            <div class="contenido-conocimientos">
+            
+                <div class="tarjeta-conocimientos div1">
+                    <h3>FRONT END</h3>
+
+                    <div>
+                        <img class="img" src="assets/iconos/front/css.jpg" alt="css">
+                        <img class="img" src="assets/iconos/front/js.jpg" alt="css">
+                        <img class="img" src="assets/iconos/front/html.jpg" alt="css">
+                        <img class="img" src="assets/iconos/front/responsive.jpg" alt="css">
+                        <img class="img" src="assets/iconos/front/sass.jpg" alt="css">
+                        <img class="img" src="assets/iconos/front/apis.jpg" alt="css">
+                        <img class="img" src="assets/iconos/front/jsx.jpg" alt="css">
+                        <img class="img" src="assets/iconos/front/logoreact.jpg" alt="css">
+                    </div>
+                </div>
+            
+            
+            
+                <div class="tarjeta-conocimientos div2">
+                    <h3>BACK END</h3>
+
+                    <div>
+                        <img class="img" src="assets/iconos/back/firebase-database.jpg" alt="css">
+                        <img class="img" src="assets/iconos/back/MySQL-Logo.jpg" alt="css">
+                        <img class="img" src="assets/iconos/back/php.jpg" alt="css">
+                        <img class="img" src="assets/iconos/back/xampp.jpg" alt="css">
+                    </div>
+                </div>
+            
+            
+        
+                <div class="tarjeta-conocimientos div3">
+                    <h3>COMPLEMENTOS</h3>
+
+                    <div>
+                        <img class="img" src="assets/iconos/complementos/git.jpg" alt="css">
+                        <img class="img" src="assets/iconos/complementos/github.jpg" alt="css">
+                        <img class="img" src="assets/iconos/complementos/json.jpg" alt="css">
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+
         <div class="cont-proyectos">
             <h2 class="titulo-proyectos" id="proyectos">Proyectos</h2>
 
@@ -74,8 +123,8 @@
                         <img class="proyecto-img" src=".../../assets/img_proyectos/<?php echo $proyecto['img']?>"  alt="<?php echo $proyecto['titulo']?>">
                     </div>
                     <div class="cont-link">
-                        <?php echo '<a href="'.$proyecto['linkProyecto'].'" target="_blank">Ver proyecto</a>'; ?>
-                        <?php echo '<a href="'.$proyecto['linkGithub'].'" target="_blank">Github</a>'; ?>
+                        <?php echo '<a class="link" href="'.$proyecto['linkProyecto'].'" target="_blank">Ver proyecto</a>'; ?>
+                        <?php echo '<a class="link" href="'.$proyecto['linkGithub'].'" target="_blank">Github</a>'; ?>
                     </div>
                 </div>
                 
@@ -83,6 +132,41 @@
             </div>
         </div>
         
+
+        <div class="cont-contacto">
+            <div class="contenido-contacto">
+                <h2 class="titulo-contacto">Contacto</h2>
+
+                <form method="post" id="contacto">
+                    
+                    <div>
+                        <label for="nombre">Nombre</label>
+                        <input required type="text" name="nombre" id="nombre">
+                    </div>
+
+                    <div>
+                        <label for="email">Email</label>
+                        <input required type="email" name="email" id="email">
+                    </div>
+
+                    <div>
+                        <label for="asunto">Asunto</label>
+                        <input required type="text" name="asunto" id="asunto">
+                    </div>
+
+                    <div>
+                        <label for="mensaje">Mensaje</label>
+                        <textarea required name="mensaje" id="mensaje" cols="40" rows="8"></textarea>
+                    </div>
+                    
+                    <div>
+                        <input type="submit" name="enviar" value="Enviar">
+                    </div>
+                    
+                </form>
+                <?php include 'src/enviar_mensaje.php';?>
+            </div>
+        </div>
 
     </main>
 </body>

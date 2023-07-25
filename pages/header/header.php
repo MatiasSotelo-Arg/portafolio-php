@@ -21,7 +21,7 @@
                         <a href="#proyectos">Proyectos</a>
                     </li>
                     <li>
-                        <a href="#">Contacto</a>
+                        <a href="#contacto">Contacto</a>
                     </li>
                 </ul>
                 

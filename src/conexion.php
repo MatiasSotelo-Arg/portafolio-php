@@ -2,7 +2,7 @@
     class conexion {
         private $servidor = "localhost";
         private $usuario = "root";
-        private $password = "";
+        private $password = "HUaxhx-@_g0K[5jS";
         private $conexion; 
         private $base = "proyectos";
     

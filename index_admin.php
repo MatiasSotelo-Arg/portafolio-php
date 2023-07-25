@@ -1,5 +1,4 @@
-<?php 
-    include 'pages\header\header_admin.php';
+<?php include 'pages//header//header_admin.php';
     $conexion = new conexion();
     $proyectos = $conexion->consultar("SELECT * FROM `proyecto`");
 ?>

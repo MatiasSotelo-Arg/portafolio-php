@@ -78,7 +78,7 @@ if($_POST) {
         </div>
 
         <div>
-            <label for="linkGithub">Link Proyecto</label>
+            <label for="linkGithub">Link Github</label>
             <input required type="text" name="linkGithub" id="linkGithub" value="<?php echo $fila['linkGithub']?>">
         </div>
 

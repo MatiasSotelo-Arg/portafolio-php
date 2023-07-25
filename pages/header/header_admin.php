@@ -14,7 +14,7 @@ if (strpos($ruta_actual, 'index_admin.php') !== false) {
 session_start();
 
 if( isset( $_SESSION['usuario']) != 'Admin') {
-    header("location:pages\login\login.php");
+    header("location:pages/login/login.php");
     die();
 }
 
@@ -32,21 +32,21 @@ if( isset( $_SESSION['usuario']) != 'Admin') {
     <?php 
     if (strpos($ruta_actual, 'index_admin.php') !== false) {
         echo '<link rel="stylesheet" href="./pages/header/header.css">';
-        echo '<link rel="stylesheet" href="css\resets.css">';
+        echo '<link rel="stylesheet" href="css/resets.css">';
     } else if (strpos($ruta_actual, 'abm.php') !== false) {
         echo '<link rel="stylesheet" href="../header/header.css">';
-        echo '<link rel="stylesheet" href="../../css\resets.css">';
+        echo '<link rel="stylesheet" href="../../css/resets.css">';
     } else if (strpos($ruta_actual,'modificar.php') !== false) {
         echo '<link rel="stylesheet" href="../header/header.css">';
-        echo '<link rel="stylesheet" href="../../css\resets.css">';
+        echo '<link rel="stylesheet" href="../../css/resets.css">';
     }
 ?>
 
 <?php
     if(strpos($ruta_actual, 'index_admin.php') !== false) {
-        $linkAdm = 'pages\abm\abm.php';
+        $linkAdm = 'pages/abm/abm.php';
         $linkProyectos = '#';
-        $linkSesion = 'src\cerrar_sesion.php';
+        $linkSesion = 'src/cerrar_sesion.php';
         $linkTitulo = 'index.php';
     } else if(strpos($ruta_actual, 'abm.php') !== false || strpos($ruta_actual, 'modificar.php') !== false ) {
         $linkAdm = '#';
@@ -72,7 +72,7 @@ if( isset( $_SESSION['usuario']) != 'Admin') {
                     <a href="<?php echo $linkProyectos ?>">Proyectos</a>
                 </li>
                 <li>
-                    <a href="<?php echo $linkAdm ?>" class="<?php echo $clase ?>">ABM</a>
+                    <a href="<?php echo $linkAdm ?>">ABM</a>
                 </li>
                 <li>
                     <a href="<?php echo $linkSesion ?>">cerrar sesion: <?php echo $_SESSION['usuario'];?></a>
