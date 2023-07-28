@@ -64,7 +64,7 @@
             
         <div class="cont-conocimientos">
 
-            <h2 class="titulo-conocimientos">Conocimientos</h2>
+            <h2 class="titulo-conocimientos" id="conocimientos">Conocimientos</h2>
             
             <div class="contenido-conocimientos">
             
@@ -133,34 +133,8 @@
             </div>
         </div>
         
-        <!-- <div class="cont-certificaciones">
-            <h2 class="titulo-certificaciones">Certificaciones</h2>
-
-            <div class="contenido-certificaciones">
-                <div class="cart-certificaciones">
-                    <a href="##">
-                        <img class="img-cert" src=".../../assets/certificaciones/carreraReact.jpg" alt="certificado coder house">
-                    </a>
-                </div>
-                <div class="cart-certificaciones">
-                    <a href="##">
-                        <img class="img-cert" src=".../../assets/certificaciones/desarrolloWeb.jpg" alt="certificado coder house">
-                    </a>
-                </div>
-                <div class="cart-certificaciones">
-                    <a href="##">
-                        <img class="img-cert" src=".../../assets/certificaciones/javaScript.jpg" alt="certificado coder house">
-                    </a>
-                </div>
-                <div class="cart-certificaciones">
-                    <a href="##">
-                        <img class="img-cert" src=".../../assets/certificaciones/react.jpg" alt="certificado coder house">
-                    </a>
-                </div>
-            </div>
-        </div> -->
         <div class="cont-certificaciones">
-            <h2 class="titulo-certificaciones">Certificaciones</h2>
+            <h2 class="titulo-certificaciones" id="certificaciones">Certificaciones</h2>
 
             <div class="contenido-certificaciones">
                 <div class="cart-certificaciones">

@@ -252,3 +252,88 @@ textarea {
     padding-top: 5px;
     height: 5%;
 }
+
+@media (max-width: 600px) {
+    .presentacion {
+        height: 100vh;
+    }
+    .cont-presentacion {
+        flex-direction: column;
+    }
+
+    /* conocimientos */
+    .cont-conocimientos {
+        height: 100%;
+        margin-bottom: 5rem;
+    }
+    .contenido-conocimientos {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+    .cont-conocimientos, .titulo-conocimientos, .contenido-conocimientos {
+        margin: 0;
+    }
+    .titulo-conocimientos {
+        padding-top: 1rem;
+    }
+    .tarjeta-conocimientos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem;
+        height: 100%;
+    }
+    .tarjeta-conocimientos div {
+        height: 100%;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap;
+        margin: 1rem;
+    }
+    .tarjeta-conocimientos h3 {
+        width: 100%;
+        padding-top: 0px;
+        height: auto; 
+    }
+    .img {
+        margin: 0.5rem;
+    }
+
+    /* proyectos */
+    .cont-proyectos {
+        justify-content:unset;
+        height: auto;
+        margin-bottom: 1.5rem;
+    }
+    .proyectos {
+        margin-top: unset;
+        display: flex;
+        flex-direction: column;
+    }
+    .proyecto {
+        margin: 0 1rem;
+    }
+
+    /* Contacto */
+    #contacto {
+        /* margin: 0; */
+        width: 90%;
+    }
+    .cont-contacto {
+        height: 50%;
+    }
+    .contenido-contacto {
+        width: auto;
+    }
+
+    /* varios */
+    .titulo-conocimientos, .titulo-proyectos, .titulo-certificaciones, .titulo-contacto {
+        font-size: 2.5rem!important;    
+    }
+}

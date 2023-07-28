@@ -45,3 +45,25 @@
 .visitado:hover {
     color: rgba(13, 13, 13, 0.96);
 }
+
+
+@media (max-width: 600px) {
+    .contenedor-header {
+        height: auto;
+    }
+    .titulo {
+        margin-top: 0.8rem;
+    }
+    .nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav div ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem 0;
+    }
+    .nav div ul li {
+        padding: 0.5rem 0;
+    }
+}

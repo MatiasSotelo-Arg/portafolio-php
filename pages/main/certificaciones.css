@@ -55,3 +55,21 @@
     font-size: 24px;
     cursor: pointer;
 }
+
+@media (max-width: 600px) {
+    .contenido-certificaciones {
+        display: flex;
+        padding: 0px;
+        overflow-x: auto;
+        margin-bottom: 3rem;
+        margin-top: 2.5rem;
+    }
+    .cart-certificaciones {
+        flex: 0 0 100%;
+    }
+    .lightbox-img {
+        margin: 50% auto;
+        max-width: none;
+        width: 100%;
+    }
+}

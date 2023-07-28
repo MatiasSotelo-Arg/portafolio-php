@@ -18,10 +18,16 @@
             <div>
                 <ul>
                     <li>
+                        <a href="#conocimientos">Conocimientos</a>
+                    </li>
+                    <li>
                         <a href="#proyectos">Proyectos</a>
                     </li>
                     <li>
                         <a href="#contacto">Contacto</a>
+                    </li>
+                    <li>
+                        <a href="#certificaciones">Certificaciones</a>
                     </li>
                 </ul>
                 
